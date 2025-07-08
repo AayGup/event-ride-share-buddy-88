@@ -83,7 +83,7 @@ export function ActivityCard({ activity, onJoinCarpool }: ActivityCardProps) {
           {hasDrivers && (
             <div className="flex items-center gap-2 p-2 bg-success/10 rounded-lg border border-success/20">
               <Car className="h-4 w-4 text-success" />
-              <span className="text-sm text-black">
+              <span className="text-sm text-muted-foreground">
                 {timeSlots.length} driver{timeSlots.length !== 1 ? 's' : ''} • {totalPassengers} passenger{totalPassengers !== 1 ? 's' : ''}
               </span>
             </div>
@@ -97,7 +97,7 @@ export function ActivityCard({ activity, onJoinCarpool }: ActivityCardProps) {
                   Active Carpools
                 </Badge>
               ) : (
-                <Badge variant="outline" className="h-4 w-4 text-muted-foreground">
+                <Badge variant="outline" className="text-xs text-muted-foreground">
                   <Users className="h-3 w-3 mr-1" />
                   No drivers yet
                 </Badge>
