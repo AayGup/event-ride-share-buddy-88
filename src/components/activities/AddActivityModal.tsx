@@ -192,7 +192,7 @@ export function AddActivityModal({
                   className="pl-10"
                   required
                 />
-                <Clock className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"/>
+                <Clock className="pl-10 text-muted-foreground"/>
               </div>
             </div>
           </div>
