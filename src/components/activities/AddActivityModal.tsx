@@ -183,14 +183,15 @@ export function AddActivityModal({
             <div className="space-y-2">
               <Label htmlFor="time">Event Time</Label>
               <div className="relative">
-                <Clock className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
-                <Input
-                  id="time"
-                  type="time"
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
-                  className="pl-10"
-                  required
+                <Clock className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground"
+                  <Input
+                    id="time"
+                    type="time"
+                    value={time}
+                    onChange={(e) => setTime(e.target.value)}
+                    className="pl-10"
+                    required
+                  />
                 />
               </div>
             </div>
