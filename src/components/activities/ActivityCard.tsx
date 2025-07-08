@@ -97,7 +97,7 @@ export function ActivityCard({ activity, onJoinCarpool }: ActivityCardProps) {
                   Active Carpools
                 </Badge>
               ) : (
-                <Badge variant="outline" className="text-xs text-muted-foreground">
+                <Badge variant="outline" className="h-4 w-4 text-muted-foreground">
                   <Users className="h-3 w-3 mr-1" />
                   No drivers yet
                 </Badge>
