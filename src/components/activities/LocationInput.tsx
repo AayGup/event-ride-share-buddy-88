@@ -41,7 +41,7 @@ export function LocationInput({ value, onChange, placeholder, label }: LocationI
       {value && (
         <div className="flex items-center gap-2 p-2 bg-success/10 rounded-lg border border-success/20">
           <MapPin className="h-4 w-4 text-success" />
-          <span className="text-sm text-black">{value}</span>
+          <span className="text-sm text-muted-foreground">{value}</span>
           <Button
             type="button"
             variant="ghost"
