@@ -16,7 +16,7 @@ interface Activity {
 }
 
 interface ActivitiesProps {
-  user: { id: string; username: string } | null;
+  user: { id: string; email: string } | null;
   onLogout: () => void;
 }
 
@@ -58,7 +58,7 @@ export function Activities({ user, onLogout }: ActivitiesProps) {
                 🚗 PoolUp!
               </h1>
               <p className="text-sm text-muted-foreground">
-                Welcome back, {user?.username}
+                Welcome back, {user?.email}
               </p>
             </div>
             <Button 

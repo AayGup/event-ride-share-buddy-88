@@ -3,12 +3,12 @@ import { createContext, useContext, useState, useEffect, ReactNode } from "react
 
 interface User {
   id: string;
-  username: string;
+  email: string;
 }
 
 interface AuthContextType {
   user: User | null;
-  login: (username: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<void>;
   logout: () => void;
   isLoading: boolean;
 }
@@ -28,7 +28,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setIsLoading(false);
   }, []);
 
-  const login = async (username: string, password: string) => {
+  const login = async (email: string, password: string) => {
     // Simulate authentication - in real app, this would be an API call
     await new Promise(resolve => setTimeout(resolve, 1000));
     
@@ -37,17 +37,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     
     let userData: User;
     
-    if (existingUsers[username]) {
+    if (existingUsers[email]) {
       // Use existing user
-      userData = existingUsers[username];
+      userData = existingUsers[email];
     } else {
       // Create new user
       userData = {
         id: Date.now().toString(),
-        username: username
+        email: email
       };
       // Save new user to users registry
-      existingUsers[username] = userData;
+      existingUsers[email] = userData;
       localStorage.setItem('carpoolUsers', JSON.stringify(existingUsers));
     }
     

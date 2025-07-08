@@ -93,7 +93,7 @@ export function Scheduler({ user }: SchedulerProps) {
       id: `slot-${Date.now()}`,
       time: data.time,
       driverId: user.id,
-      driverName: user.email.split('@')[0],
+      driverName: user.email ? user.email.split('@')[0] : `user-${user.id}`,
       location: data.location,
       note: data.note,
       capacity: data.capacity,
