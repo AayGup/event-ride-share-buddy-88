@@ -189,7 +189,7 @@ export function AddActivityModal({
                   type="time"
                   value={time}
                   onChange={(e) => setTime(e.target.value)}
-                  className="text-muted-foreground"
+                  className="pl-10"
                   required
                 />
               </div>
